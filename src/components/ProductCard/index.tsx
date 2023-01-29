@@ -17,7 +17,7 @@ type IProductCard = {
 
 const ProductCard = ({ product, categoryFields, titleField }: IProductCard) => {
     const dispatch = useDispatch();
-    const titleFieldId: string = categoryFields.find((field: CatergoryFields) => field.id === titleField).id;
+    const titleFieldId: string = categoryFields.find((field: CatergoryFields) => field.id === titleField)?.id;
     const titleFieldName: string = product.fieldsValue.find((value: ProductFields) => value.id === titleFieldId)?.value;
 
     return (

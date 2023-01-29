@@ -19,7 +19,7 @@ type ICategoryCard = {
 
 const CategoryCard = ({ category }: ICategoryCard) => {
     const dispatch = useDispatch();
-    const titleFieldName: string = category.fields.find(field => field.id === category.titleField).value;
+    const titleFieldName: string = category.fields.find(field => field.id === category.titleField)?.value;
 
     return (
         <View style={styles.container}>
