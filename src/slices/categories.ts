@@ -15,7 +15,7 @@ const builderNewField = (type: string) => {
     return field;
 }
 
-const builderNewCatergory = (categoriesNameList: Array<string>) => {
+const builderNewCatergory = () => {
     const field: CatergoryFields = builderNewField(FIELD_TYPES["TEXT"]);
 
     const category: CategoriesDetails = {
@@ -35,7 +35,7 @@ export const categorySlice = createSlice({
     reducers: {
         createCategory: (state: CategoriesDetails[]) => {
             const categoriesNameList = state.map(category => category.name);
-            if (!categoriesNameList.includes(NEW_CATEGORY)) return [...state, builderNewCatergory(categoriesNameList)];
+            if (!categoriesNameList.includes(NEW_CATEGORY)) return [...state, builderNewCatergory()];
         },
         removeCategoryById: (state: CategoriesDetails[], { payload }: PayloadAction<string>) => {
             return state.filter(category => category.id !== payload);
