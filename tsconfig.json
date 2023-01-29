@@ -1,0 +1,20 @@
+{
+    "extends": "expo/tsconfig.base",
+    "compilerOptions": {
+      "jsx": "react-native",
+      "allowSyntheticDefaultImports": true,
+      "baseUrl": ".",
+      "paths": {
+        "~components": ["src/components"],
+        "~constants": ["src/constants"],
+        "~components/*": ["src/components/*"],
+        "~store/*": ["src/store/*"],
+        "~models/*": ["src/models/*"],
+        "~store": ["src/store"],
+        "~views/*": ["src/views/*"],
+        "~types/*": ["src/types/*"],
+        "~src/*": ["src/*"]
+      }
+    }
+  }
+  
